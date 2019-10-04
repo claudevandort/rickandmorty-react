@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Character from './components/Character'
+import App from './components/App'
 
-ReactDOM.render(<Character name="Rick Sanchez" />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
