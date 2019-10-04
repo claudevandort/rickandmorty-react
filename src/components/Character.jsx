@@ -4,7 +4,7 @@ import React from 'react'
 const Character = ({ name, image }) => (
     <div className="character">
         <img src={image} alt={name} />
-        { name }
+        <p>{ name }</p>
     </div>
 )
 
