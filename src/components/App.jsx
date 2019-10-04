@@ -6,7 +6,7 @@ import Container from './Container'
 const App = () => [
     <Header title="Rick and Morty" />, 
     <Container title="Characters">
-        <Character name="Rick Sanchez" />
+        <Character name="Rick Sanchez" image="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
     </Container>
 ]
 
