@@ -8,14 +8,13 @@ const api_path = '/character'
 
 const Characters = () => {
     const characters = useRMAPI(api_path)
-    return([
-        <Header key="1" title="Rick and Morty" />, 
-        <Container key="2" title="Characters">
+    return(
+        <Container title="Characters">
             {characters.map(character =>
                 <Character key={character.id} name={character.name} image={character.image} />
             )}
         </Container>
-    ])
+    )
 }
 
 export default Characters
