@@ -6,7 +6,7 @@ import useRMAPI from '../hooks/useRMAPI'
 
 const api_path = '/character'
 
-const Home = () => {
+const Characters = () => {
     const characters = useRMAPI(api_path)
     return([
         <Header key="1" title="Rick and Morty" />, 
@@ -18,4 +18,4 @@ const Home = () => {
     ])
 }
 
-export default Home
+export default Characters

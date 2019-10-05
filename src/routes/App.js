@@ -1,10 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import Home from '../components/Home'
+import Characters from '../components/Characters'
+import Episodes from '../components/Episodes'
 
 const App = () => (
     <BrowserRouter>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/characters" component={Characters} />
+        <Route exact path="/episodes" component={Episodes} />
     </BrowserRouter>
 )
 
