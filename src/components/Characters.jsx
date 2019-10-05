@@ -2,11 +2,12 @@ import React from 'react'
 import Character from './Character'
 import Container from './Container'
 import useRMAPI from '../hooks/useRMAPI'
+import { connect } from 'react-redux'
 
 const api_path = '/character'
 
-const Characters = () => {
-    const characters = useRMAPI(api_path)
+const Characters = ({ characters }) => {
+    //const characters = useRMAPI(api_path)
     return(
         <Container title="Characters">
             {characters.map(character =>
@@ -16,4 +17,10 @@ const Characters = () => {
     )
 }
 
-export default Characters
+const mapStateToProps = state => {
+    return {
+        characters: state.characters
+    }
+}
+
+export default connect(mapStateToProps, null)(Characters)
