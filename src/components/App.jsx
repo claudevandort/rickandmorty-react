@@ -10,12 +10,11 @@ const App = () => {
             .then(response => response.json())
             .then(data => setCharacters(data.results))
     }, [])
-    console.log(characters)
     return([
-        <Header title="Rick and Morty" />, 
-        <Container title="Characters">
+        <Header key="1" title="Rick and Morty" />, 
+        <Container key="2" title="Characters">
             {characters.map(character =>
-                <Character name={character.name} image={character.image} />
+                <Character key={character.id} name={character.name} image={character.image} />
             )}
         </Container>
     ])

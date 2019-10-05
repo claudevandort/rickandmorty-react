@@ -1,5 +1,5 @@
 import React from 'react'
-// import '../assets/styles/App.scss'
+import PropTypes from 'prop-types'
 
 const Character = ({ name, image }) => (
     <div className="character">
@@ -7,5 +7,10 @@ const Character = ({ name, image }) => (
         <p>{ name }</p>
     </div>
 )
+
+Character.propTypes = {
+    name: PropTypes.string,
+    image: PropTypes.string
+}
 
 export default Character
