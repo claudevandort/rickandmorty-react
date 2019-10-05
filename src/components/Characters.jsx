@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './Header'
 import Character from './Character'
 import Container from './Container'
 import useRMAPI from '../hooks/useRMAPI'
