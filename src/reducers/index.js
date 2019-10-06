@@ -7,6 +7,11 @@ const reducer = (state, action) => {
                 ...state,
                 characters: [...state.characters, ...action.payload]
             };
+        case actions.addEpisodes:
+            return {
+                ...state,
+                episodes: [...state.episodes, ...action.payload]
+            };
         default:
             return state;
     }

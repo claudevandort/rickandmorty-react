@@ -4,14 +4,18 @@ import Header from '../components/Header'
 import Home from '../components/Home'
 import Characters from '../components/Characters'
 import Episodes from '../components/Episodes'
-import { addCharacters } from '../actions'
+import { addCharacters, addEpisodes } from '../actions'
 import { connect } from 'react-redux'
 
 class App extends React.Component{
     componentDidMount(){
-        fetch('https://rickandmortyapi.com/api/character')
+        const API_BASE = 'https://rickandmortyapi.com/api'
+        fetch(`${API_BASE}/character`)
             .then(response => response.json())
             .then(({results: items}) => this.props.addCharacters(items))
+        fetch(`${API_BASE}/episode`)
+            .then(response => response.json())
+            .then(({results: items}) => this.props.addEpisodes(items))
     }
     render(){
         return ([
@@ -26,7 +30,8 @@ class App extends React.Component{
 }
 
 const mapDispatchToProps = {
-    addCharacters
+    addCharacters,
+    addEpisodes
 }
 
 export default connect(null, mapDispatchToProps)(App)

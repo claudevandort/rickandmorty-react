@@ -6,7 +6,8 @@ import reducer from './reducers'
 import App from './routes/App'
 
 const initialState = {
-    characters: []
+    characters: [],
+    episodes: []
 }
 
 const store = createStore(reducer, initialState)
