@@ -1,5 +1,15 @@
+import { actions } from '../actions'
+
 const reducer = (state, action) => {
-    return state
+    switch (action.type) {
+        case actions.addCharacters:
+            return {
+                ...state,
+                characters: [...state.characters, ...action.payload]
+            };
+        default:
+            return state;
+    }
 }
 
 export default reducer

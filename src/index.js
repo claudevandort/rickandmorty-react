@@ -6,13 +6,7 @@ import reducer from './reducers'
 import App from './routes/App'
 
 const initialState = {
-    characters: [
-        {
-            id: 1,
-            name: 'Rick Sanchez',
-            image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
-        }
-    ]
+    characters: []
 }
 
 const store = createStore(reducer, initialState)
